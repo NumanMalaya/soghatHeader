@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    let btnStatus = 0;
     let currentScroll = 0;
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 30) {
@@ -8,6 +9,9 @@ $(document).ready(function () {
             $('#nbarr2cl1text1').hide();
             $('#nbarr2cl1text2').hide();
             $('#nbarr2cl1text3').hide();
+            if(btnStatus == 1){
+                $('#input-fields').css({width: '360', height: '44px'});
+            }
             currentScroll = $(window).scrollTop(); 
         } 
         else if ($(window).scrollTop() <= 30 && currentScroll != 0) {
@@ -17,6 +21,11 @@ $(document).ready(function () {
             $('#nbarr2cl1text1').show();
             $('#nbarr2cl1text2').show();
             $('#nbarr2cl1text3').show();
+            if(btnStatus == 1){
+                $('#input-fields').css({width: '805px', height: '59px'});
+                $('#nbarr2cl1text2').hide();
+                $('#nbarr2cl1text3').hide();
+            }
         }
     });
     function resetFields(inputField, otherInput1, otherInput2) {
@@ -41,9 +50,10 @@ $(document).ready(function () {
             $('#nbarr2cl1text2').hide();
             $('#nbarr2cl1text3').hide();
         }
+        btnStatus = 0;
     };
     function handleInputHover(inputField, otherInput1, otherInput2, hideText1, hideText2) {
-        if($(window).scrollTop() < 30){
+        if($(window).scrollTop() <= 30){
             $(inputField).css({ backgroundColor: 'white', transition: '0.9s', width: '100%', height: '100%' });
             $('#input-fields').css({ backgroundColor: '#e3e2e2', height: '59px', width: '805px', overflow: 'hidden' });
         } 
@@ -69,6 +79,7 @@ $(document).ready(function () {
                 resetFields(inputField, otherInput1, otherInput2);
             }
         });
+        btnStatus = 1;
     };
     $('#nbarr2cl1input1').click(function () {
         handleInputHover('#nbarr2cl1input1', '#nbarr2cl1input2', '#nbarr2cl1input3', '#nbarr2cl1text2', '#nbarr2cl1text3');

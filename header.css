@@ -7,6 +7,7 @@
     background-color: white;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 .nbar .r1 .cl2 {
     padding: 20px 0px;
