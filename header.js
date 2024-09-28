@@ -33,7 +33,7 @@ $(document).ready(function () {
         $('#input-fields').css({ backgroundColor: 'white', height: '', width: '', overflow: '' });
         $(otherInput1).css({ backgroundColor: '' });
         $(otherInput2).css({ backgroundColor: '' });
-        $('#searchBtn').css({ width: '', height: '' });
+        $('#searchBtnHeader').css({ width: '', height: '' });
         $('#text').addClass('d-none');
         $('#nbarr2cl1text1, #nbarr2cl1text2, #nbarr2cl1text3').show();
         $('#nbarr2cl1input1, #nbarr2cl1input2, #nbarr2cl1input3').show();
@@ -66,7 +66,7 @@ $(document).ready(function () {
         }
         $(otherInput1).css('backgroundColor', 'transparent');
         $(otherInput2).css('backgroundColor', 'transparent');
-        $('#searchBtn').css({ width: '100px', height: '70%' });
+        $('#searchBtnHeader').css({ width: '100px', height: '70%' });
         $('#text').removeClass('d-none');
         $(hideText1).hide();
         $(hideText2).hide();

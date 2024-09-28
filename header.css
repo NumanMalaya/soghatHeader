@@ -183,7 +183,7 @@
 .inputChanged .divider {
     padding-top: 0px;
 }
-.inputChanged #searchBtn {
+.inputChanged #searchBtnHeader {
     font-Size: 13px;
     padding: 5px;
     width: 30px;
