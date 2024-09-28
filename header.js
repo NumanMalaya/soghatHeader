@@ -45,12 +45,11 @@ $(document).ready(function () {
     function handleInputHover(inputField, otherInput1, otherInput2, hideText1, hideText2) {
         if($(window).scrollTop() < 30){
             $(inputField).css({ backgroundColor: 'white', transition: '0.9s', width: '100%', height: '100%' });
-            $('#input-fields').css({ backgroundColor: '#e3e2e2', height: '58px', width: '803px', overflow: 'hidden' });
+            $('#input-fields').css({ backgroundColor: '#e3e2e2', height: '59px', width: '805px', overflow: 'hidden' });
         } 
         else{
-            console.log("1");
             $(inputField).css({ backgroundColor: 'white', transition: '0.9s', width: '100%', height: '100%' });
-            $('#input-fields').css({ backgroundColor: '#e3e2e2', height: '43px', width: '360px', overflow: 'hidden' });
+            $('#input-fields').css({ backgroundColor: '#e3e2e2', height: '44px', width: '360px', overflow: 'hidden' });
             $('#nbarr2cl1text1').hide();
             $('#nbarr2cl1text2').hide();
             $('#nbarr2cl1text3').hide();

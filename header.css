@@ -3,67 +3,85 @@
     margin: 0px;
     box-sizing: border-box;
 }
-
 .nbar {
     background-color: white;
     position: sticky;
     top: 0;
 }
-
 .nbar .r1 .cl2 {
     padding: 20px 0px;
     display: flex;
     justify-content: center;
 }
-
 .nbar .r1 .cl2 a {
     font-size: 17px;
-    font-weight: 500;
     text-decoration: none;
     color: black;
-    margin: 0px 10px;
 }
-
+.nbar .r1 .cl2 a::after{
+    content: '';
+    background-color: rgb(255, 200, 0);
+    width: 0px;
+    height: 3px;
+    display: block;
+    transition: 0.5s;
+}
+.nbar .r1 .cl2 a:hover::after{
+    width: 100%;
+}
+.nbar .r1 .cl2 .separator{
+    border-right: 1.8px solid #cbcbcb;
+    padding-top: 0px;
+}
+.nbar .r1 .cl3 {
+    display: flex;
+    justify-content: space-evenly;
+}
 .nbar .r1 .cl3 .profile {
-    padding: 7px 10px;
+    padding: 6px 10px;
     border-radius: 100px;
     border: 1px solid rgb(187, 185, 185);
     width: fit-content;
     cursor: pointer;
-    transform: translateX(50%);
 }
-
 .nbar .r1 .cl3 .profile:hover {
     box-shadow: 0px 5px 10px -3px rgb(177, 176, 176);
     transition: 0.6s;
 }
-
 .nbar .r1 .cl3 .dropdown-menu {
     width: 240px;
     border-radius: 15px;
     border: none;
     box-shadow: 0px 1px 10px 1px rgb(177, 176, 176);
 }
-
 .nbar .r1 .cl3 .dropdown-menu a {
     padding: 8px 20px;
     font-weight: 400;
     font-size: 15px;
 }
-
+.nbar .r1 .cl3 .cart-icon{
+    position: relative;
+}
+.nbar .r1 .cl3 .cart-icon span{
+    position: absolute;
+    padding: 0px 5px;
+    border-radius: 5px;
+    top: -2px;
+    right: -7px;
+}
+.nbar .r1 .cl3 .cart-icon img{
+    height: 30px;
+}
 .nbar .r2 .cl1 {
     display: flex;
     justify-content: center;
 }
-
 /* .nbar .r2 .cl1  */
 .input-fields {
     position: relative;
     border-radius: 50px;
-    width: fit-content;
     box-shadow: 0px 1px 3px 1px rgb(177, 176, 176);
 }
-
 .input-fields input {
     padding: 25px 25px 10px 25px;
     border-radius: 50px;
@@ -74,17 +92,14 @@
     position: relative;
     transition: 0.6s;
 }
-
 .input-fields input:hover {
     background: #eeecec;
     cursor: pointer;
 }
-
 .input-fields .divider {
     border-right: 1px solid #cbcbcb;
     padding-top: 10px;
 }
-
 .input-fields button {
     background-color: rgba(255, 196, 0, 0.913) !important;
     border-radius: 50px;
@@ -94,11 +109,10 @@
     width: 45px;
     height: 45px;
 }
-
 .textAppear #nbarr2cl1text1,
 .textAppear #nbarr2cl1text2,
 .textAppear #nbarr2cl1text3 {
-    animation: textAppear 1.8s ease-in-out;
+    animation: textAppear 1.9s ease-in-out;
 }
 @keyframes textAppear {
     0% {
@@ -113,89 +127,75 @@
 }
 
 .nbar .r2 .cl1 #nbarr2cl1text1 {
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 500;
     position: absolute;
     top: 9px;
-    left: 25px;
+    left: 26px;
     z-index: 1000;
 }
-
 .nbar .r2 .cl1 #nbarr2cl1input2 {
     position: relative;
 }
-
 .nbar .r2 .cl1 #nbarr2cl1text2 {
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 500;
     position: absolute;
     top: 9px;
-    left: 295px;
+    left: 296px;
     z-index: 1000;
 }
-
 .nbar .r2 .cl1 #nbarr2cl1input3 {
     position: relative;
 }
-
 .nbar .r2 .cl1 #nbarr2cl1text3 {
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 500;
     position: absolute;
     top: 9px;
-    left: 563px;
+    left: 566px;
     z-index: 1000;
 }
-
 .inputChanged {
     position: absolute;
     top: 42px;
 }
-
 .inputChanged input::placeholder {
     font-weight: 400;
     color: black;
 }
-
 .inputChanged #nbarr2cl1input1 {
     width: 100px;
     padding: 10px;
     transition: 0.6s;
 }
-
 .inputChanged #nbarr2cl1input2 {
     width: 120px;
     padding: 10px;
     transition: 0.6s;
 }
-
 .inputChanged #nbarr2cl1input3 {
     width: 130px;
     padding: 10px;
     transition: 0.6s;
 }
-
 .inputChanged .divider {
     padding-top: 0px;
 }
-
 .inputChanged #searchBtn {
     font-Size: 13px;
     padding: 5px;
     width: 30px;
     height:30px;
 }
-
 .inputChanged #nbarr2cl1text1,
 .inputChanged #nbarr2cl1text2,
 .inputChanged #nbarr2cl1text3 {
     display: none;
 }
-
 .slideup {
     animation: slideup 0.6s forwards;
 }
-
 @keyframes slideup {
     0% {
         transform: translateY(0);
@@ -205,11 +205,9 @@
         transform: translateY(-40%);
     }
 }
-
 .slidedown {
     animation: slidedown 0.6s forwards;
 }
-
 @keyframes slidedown {
     0% {
         transform: translateY(-40%);
