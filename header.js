@@ -2,7 +2,7 @@ $(document).ready(function () {
     let btnStatus = 0;
     let currentScroll = 0;
     $(window).on('scroll', function () {
-        if ($(window).scrollTop() > 30) {
+        if ($(window).scrollTop() > 30 && $(window).width() >= 576) {
             $('#input-fields').addClass('slideup').removeClass('slidedown');
             $('#nbarr1cl2btns').addClass('slideup').removeClass('slidedown').hide();
             $('#input-fields').addClass('inputChanged');
@@ -14,7 +14,7 @@ $(document).ready(function () {
             }
             currentScroll = $(window).scrollTop(); 
         } 
-        else if ($(window).scrollTop() <= 30 && currentScroll != 0) {
+        else if ($(window).scrollTop() <= 30 && currentScroll != 0  && $(window).width() >= 576 ) {
             $('#input-fields').removeClass('slideup').addClass('slidedown');
             $('#nbarr1cl2btns').removeClass('slideup').addClass('slidedown').show();
             $('#input-fields').addClass('textAppear').removeClass('inputChanged');
@@ -22,7 +22,15 @@ $(document).ready(function () {
             $('#nbarr2cl1text2').show();
             $('#nbarr2cl1text3').show();
             if(btnStatus == 1){
-                $('#input-fields').css({width: '805px', height: '59px'});
+                if($(window).width() < 992 && $(window).width() >= 768){
+                    $('#input-fields').css({height: '59px', width: '730px'});
+                }
+                else if($(window).width() < 768){
+                    $('#input-fields').css({height: '59px', width: '551px'});
+                }
+                else{
+                    $('#input-fields').css({width: '805px', height: '59px'});
+                }
                 $('#nbarr2cl1text2').hide();
                 $('#nbarr2cl1text3').hide();
             }
@@ -54,12 +62,20 @@ $(document).ready(function () {
     };
     function handleInputHover(inputField, otherInput1, otherInput2, hideText1, hideText2) {
         if($(window).scrollTop() <= 30){
+            if($(window).width() < 992 && $(window).width() >= 768){
+                $('#input-fields').css({ backgroundColor: '#e3e2e2', height: '59px', width: '730px', overflow: 'hidden' });
+            }
+            else if($(window).width() < 768){
+                $('#input-fields').css({ backgroundColor: '#e3e2e2', height: '59px', width: '551px', overflow: 'hidden' });
+            }
+            else{
+                $('#input-fields').css({ backgroundColor: '#e3e2e2', height: '59px', width: '805px', overflow: 'hidden' });
+            }
             $(inputField).css({ backgroundColor: 'white', transition: '0.9s', width: '100%', height: '100%' });
-            $('#input-fields').css({ backgroundColor: '#e3e2e2', height: '59px', width: '805px', overflow: 'hidden' });
         } 
         else{
-            $(inputField).css({ backgroundColor: 'white', transition: '0.9s', width: '100%', height: '100%' });
             $('#input-fields').css({ backgroundColor: '#e3e2e2', height: '44px', width: '360px', overflow: 'hidden' });
+            $(inputField).css({ backgroundColor: 'white', transition: '0.9s', width: '100%', height: '100%' });
             $('#nbarr2cl1text1').hide();
             $('#nbarr2cl1text2').hide();
             $('#nbarr2cl1text3').hide();
