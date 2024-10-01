@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    var row = $('.nbar .r1');
+    var rowOffset = row.offset().top;
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > rowOffset){
+            row.addClass('fixed-top');
+            $('body').css({ 'padding-top': '60px' });
+        } 
+        else{
+            row.removeClass('fixed-top');  
+            $('body').css({ 'padding-top': '' });
+        }
+    });
     let btnStatus = 0;
     let currentScroll = 0;
     $(window).on('scroll', function () {

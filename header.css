@@ -321,6 +321,12 @@
 
 }
 @media screen and (max-width: 576px) {
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+    }
     .nbar .r1 .cl3 {
         display: flex;
         justify-content: end;
