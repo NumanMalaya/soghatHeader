@@ -55,18 +55,13 @@ $(document).ready(function () {
         $('#input-fields').css({ backgroundColor: 'white', height: '', width: '', overflow: '' });
         $(otherInput1).css({ backgroundColor: '' });
         $(otherInput2).css({ backgroundColor: '' });
-        $('#searchBtnHeader').css({ width: '', height: '' });
+        $('#searchBtnHeader').css({ width: ''});
         $('#text').addClass('d-none');
         $('#nbarr2cl1text1, #nbarr2cl1text2, #nbarr2cl1text3').show();
         $('#nbarr2cl1input1, #nbarr2cl1input2, #nbarr2cl1input3').show();
         $('#divider1').show();
         $('#divider2').show();
-        if(inputField=='#nbarr2cl1input2'){
-            $('#nbarr2cl1text2').css({ left: '' });
-        }
-        else if(inputField=='#nbarr2cl1input3'){
-            $('#nbarr2cl1text3').css({ left: '' });
-        }
+        $('.searchText').css({ left: '' });
         if($(window).scrollTop() > 30){
             $('#nbarr2cl1text1').hide();
             $('#nbarr2cl1text2').hide();
@@ -96,7 +91,7 @@ $(document).ready(function () {
         }
         $(otherInput1).css('backgroundColor', 'transparent');
         $(otherInput2).css('backgroundColor', 'transparent');
-        $('#searchBtnHeader').css({ width: '100px', height: '70%' });
+        $('#searchBtnHeader').css({ width: '100px'});
         $('#text').removeClass('d-none');
         $(hideText1).hide();
         $(hideText2).hide();
@@ -104,6 +99,7 @@ $(document).ready(function () {
         $(otherInput2).hide();
         $('#divider1').hide();
         $('#divider2').hide();
+        $('.searchText').css({ left: '25px' });
         $(document).click(function (event) {
             if (!$(event.target).closest('#input-fields, ' + inputField).length) {
                 resetFields(inputField, otherInput1, otherInput2);
@@ -116,10 +112,8 @@ $(document).ready(function () {
     });
     $('#nbarr2cl1input2').click(function () {
         handleInputHover('#nbarr2cl1input2', '#nbarr2cl1input1', '#nbarr2cl1input3', '#nbarr2cl1text1', '#nbarr2cl1text3');
-        $('#nbarr2cl1text2').css({ left: '25px' });
     });
     $('#nbarr2cl1input3').click(function () {
         handleInputHover('#nbarr2cl1input3', '#nbarr2cl1input2', '#nbarr2cl1input1', '#nbarr2cl1text2', '#nbarr2cl1text1');
-        $('#nbarr2cl1text3').css({ left: '25px' });
     });
 });
