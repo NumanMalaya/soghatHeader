@@ -13,17 +13,15 @@ $(document).ready(function () {
             }
         }
     });
-    let btnStatus = 0;
+    let btnStatus = "unclick";
     let currentScroll = 0;
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 30 && $(window).width() >= 576) {
             $('#input-fields').addClass('slideup').removeClass('slidedown');
             $('#nbarr1cl2btns').addClass('slideup').removeClass('slidedown').hide();
             $('#input-fields').addClass('inputChanged');
-            $('#nbarr2cl1text1').hide();
-            $('#nbarr2cl1text2').hide();
-            $('#nbarr2cl1text3').hide();
-            if(btnStatus == 1){
+            $('.searchText').hide();
+            if(btnStatus == "clicked"){
                 $('#input-fields').css({width: '360', height: '44px'});
             }
             currentScroll = $(window).scrollTop(); 
@@ -32,10 +30,8 @@ $(document).ready(function () {
             $('#input-fields').removeClass('slideup').addClass('slidedown');
             $('#nbarr1cl2btns').removeClass('slideup').addClass('slidedown').show();
             $('#input-fields').addClass('textAppear').removeClass('inputChanged');
-            $('#nbarr2cl1text1').show();
-            $('#nbarr2cl1text2').show();
-            $('#nbarr2cl1text3').show();
-            if(btnStatus == 1){
+            $('.searchText').show();
+            if(btnStatus == "clicked"){
                 if($(window).width() < 992 && $(window).width() >= 768){
                     $('#input-fields').css({height: '59px', width: '730px'});
                 }
@@ -43,7 +39,7 @@ $(document).ready(function () {
                     $('#input-fields').css({height: '59px', width: '551px'});
                 }
                 else{
-                    $('#input-fields').css({width: '805px', height: '59px'});
+                    $('#input-fields').css({height: '59px', width: '805px'});
                 }
                 $('#nbarr2cl1text2').hide();
                 $('#nbarr2cl1text3').hide();
@@ -63,7 +59,7 @@ $(document).ready(function () {
         if($(window).scrollTop() > 30){
             $('.searchText').hide();
         }
-        btnStatus = 0;
+        btnStatus = "unclick";
     };
     function handleInputHover(inputField, otherInputs, hideTexts) {
         if($(window).scrollTop() <= 30){
@@ -88,7 +84,7 @@ $(document).ready(function () {
                 resetFields(inputField, otherInputs);
             }
         });
-        btnStatus = 1;
+        btnStatus = "clicked";
     };
     $('.navbar-input').click(function () {
         let inputField = this;
