@@ -55,7 +55,7 @@
 }
 .nbar .r1 .cl3 .profile:hover {
     box-shadow: 0px 5px 10px -3px rgb(177, 176, 176);
-    transition: 0.6s;
+    transition: 0.5s;
 }
 .nbar .r1 .cl3 .dropdown-menu {
     width: 240px;
@@ -103,7 +103,7 @@
     outline: none;
     background-color: transparent;
     position: relative;
-    transition: 0.6s;
+    transition: 0.3s;
 }
 .input-fields input:hover {
     background: #eeecec;
@@ -219,17 +219,17 @@
 .inputChanged #nbarr2cl1input1 {
     width: 100px;
     padding: 10px;
-    transition: 0.6s;
+    transition: 0.3s;
 }
 .inputChanged #nbarr2cl1input2 {
     width: 120px;
     padding: 10px;
-    transition: 0.6s;
+    transition: 0.3s;
 }
 .inputChanged #nbarr2cl1input3 {
     width: 130px;
     padding: 10px;
-    transition: 0.6s;
+    transition: 0.3s;
 }
 .inputChanged .divider {
     padding-top: 0px;
@@ -246,7 +246,7 @@
     display: none;
 }
 .slideup {
-    animation: slideup 0.6s forwards;
+    animation: slideup 0.3s forwards;
 }
 @keyframes slideup {
     0% {
@@ -258,7 +258,7 @@
     }
 }
 .slidedown {
-    animation: slidedown 0.6s forwards;
+    animation: slidedown 0.3s forwards;
 }
 @keyframes slidedown {
     0% {
