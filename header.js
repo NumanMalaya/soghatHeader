@@ -21,6 +21,7 @@ $(document).ready(function () {
             $('#nbarr1cl2btns').addClass('slideup').removeClass('slidedown').hide();
             $('#input-fields').addClass('inputChanged');
             $('.searchText').hide();
+            $('.nbar').css({'padding-bottom': '13px'});
             if(btnStatus == "clicked"){
                 $('#input-fields').css({width: '360', height: '44px'});
             }
@@ -31,6 +32,7 @@ $(document).ready(function () {
             $('#nbarr1cl2btns').removeClass('slideup').addClass('slidedown').show();
             $('#input-fields').addClass('textAppear').removeClass('inputChanged');
             $('.searchText').show();
+            $('.nbar').css({'padding-bottom': ''});
             if(btnStatus == "clicked"){
                 if($(window).width() < 992 && $(window).width() >= 768){
                     $('#input-fields').css({height: '59px', width: '730px'});
