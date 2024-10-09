@@ -10,25 +10,29 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <?php
-        $headerSearchbar = true;
-        if($headerSearchbar){
+        $searchbar = false;
+        if($searchbar){
             ?> <script>
                 if(window.innerWidth >= 576) {
-                    $headerSearchbarDisplay = "block";
+                    $searchbarDisplay = "block";
                 } 
                 else{
-                    $headerSearchbarDisplay = "none";
+                    $searchbarDisplay = "none";
                 }
             </script> <?php
             $headerJS = "header.js";
         }
         else{
-            $headerSearchbarDisplay = "none";
+            $searchbarDisplay = "none";
+            $searchbar2Display = "none";
         }
     ?>
     <style>
         .nbar .r2{
-            display: <?php echo $headerSearchbarDisplay; ?>;
+            display: <?php echo $searchbarDisplay; ?>;
+        }
+        .nbar .r3{
+            display: <?php echo $searchbar2Display; ?>;
         }
     </style>
 </head>
