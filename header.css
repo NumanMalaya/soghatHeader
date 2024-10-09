@@ -21,7 +21,7 @@
     border-radius: 10px;
 }
 .nbar .r1 .cl2 {
-     padding: 20px 0px 0px;
+    padding: 20px 0px 0px;
     display: flex;
     justify-content: center;
 }
@@ -204,7 +204,7 @@
     z-index: 1;
     font-size: 9px;
     position: absolute;
-    left: 21px;
+    left: 33px;
 }
 .nbar .r3 .cl1 .input-field-2 i{
     margin-left: auto;
@@ -272,8 +272,6 @@
         transform: translateY(0);
     }
 }
-
-
 
 @media screen and (max-width: 992px) {
     .nbar .r1 .cl3 .dropdown-menu {
@@ -353,9 +351,6 @@
     }
     
 }
-
-
-
 
 
 .bdr {
